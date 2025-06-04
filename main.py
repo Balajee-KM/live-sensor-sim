@@ -21,3 +21,7 @@ def receive_data(payload: dict):
 @app.get("/data")
 def get_data():
     return data_store[-10:]
+
+@app.get("/")
+def home():
+    return {"message": "Welcome! FastAPI server is live 🚀"}
